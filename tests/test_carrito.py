@@ -10,7 +10,7 @@ def test_carrito_nuevo_tiene_total_cero():
 def test_agregar_producto_actualiza_total():
     carrito = Carrito()
     carrito.agregar("Manzana", 10.0, 3)
-    assert carrito.total() == pytest.approx(99.0)
+    assert carrito.total() == pytest.approx(30.0)
 
 
 def test_cantidad_cero_error():
