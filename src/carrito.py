@@ -11,7 +11,7 @@ class Carrito:
         self.productos.append(producto)
 
     def total(self):
-        total = 0
-        for producto in self.productos:
-            total += producto["precio"] * producto["cantidad"]
-        return total
+        return sum(
+            producto["precio"] * producto["cantidad"]
+            for producto in self.productos
+        )
