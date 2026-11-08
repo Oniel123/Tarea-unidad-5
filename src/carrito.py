@@ -3,6 +3,8 @@ class Carrito:
         self.productos = []
 
     def agregar(self, nombre, precio, cantidad):
+        if cantidad == 0:
+            raise ValueError("La cantidad no puede ser 0")
         producto = {
             "nombre": nombre,
             "precio": precio,
