@@ -17,3 +17,4 @@ class Carrito:
             producto["precio"] * producto["cantidad"]
             for producto in self.productos
         )
+    

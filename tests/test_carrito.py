@@ -13,9 +13,12 @@ def test_agregar_producto_actualiza_total():
     assert carrito.total() == pytest.approx(30.0)
 
 
-def test_cantidad_cero():
+def test_cantidad_cero_error():
     carrito = Carrito()
     with pytest.raises(ValueError):
         carrito.agregar("Manzana", 10.0, 0)
 
-
+def test_cantidad_negativa_error():
+    carrito = Carrito()
+    with pytest.raises(ValueError):
+        carrito.agregar("Manzana", 10.0, -5)
